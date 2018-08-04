@@ -5,10 +5,10 @@ url: "http://www.dyutibarma.github.io/monochrome"
 author:
   name: "The Review Index"
   email: "dyutibarma@gmail.com"
-  url: "https://thereviewindex.com"
+  url: "https://bsuthersan.github.io"
 
 # Build settings
-baseurl: /monochrome # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
