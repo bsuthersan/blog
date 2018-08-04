@@ -1,5 +1,5 @@
 ---
-title: First blog post
+title: Introducing the West London Zone Network map
 description: This is our first post. Hello World!
 header: Hello World
 ---
