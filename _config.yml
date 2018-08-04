@@ -1,14 +1,14 @@
 # Site settings
-title: Monochrome | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
-url: "http://www.dyutibarma.github.io/monochrome"
+title: Data and the Third Sector
+description: "A blog about data science, with a focus on charities, voluntary and community organisations"
+url: "http://www.bsuthersan.github.io/blog"
 author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
+  name: Bridget Suthersan
+  email: "bridget.suthersan@gmail.com
   url: "https://bsuthersan.github.io"
 
 # Build settings
-baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog
 markdown: kramdown
 source: .
 destination: ./_site
