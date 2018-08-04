@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Bridget
+title: About
 ---
 ## About
 
