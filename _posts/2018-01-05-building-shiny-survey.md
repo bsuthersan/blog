@@ -180,6 +180,6 @@ The second is for partners to report on the number of engaged students per sessi
   }
 )
 ```
- 
- 
+
+The final version was never deployed, as we ultimately decided to stay with our current system whilst continuning to pursue other options. Nonetheless, it was a useful experience to think a little bit 'out of the box' and leverge shiny's reactivity functionality not just for data output, but also for data input.
 
