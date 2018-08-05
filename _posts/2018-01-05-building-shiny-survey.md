@@ -92,3 +92,5 @@ shinyApp(
                                          ))
                      ))
 ```
+
+A few things to note here. First, there is a password 
