@@ -6,7 +6,7 @@ One of my roles at West London Zone involves overseeing the partner data system 
 
 After reading [this post](https://shiny.rstudio.com/articles/persistent-data-storage.html) from Dean Attali on persistent data storage in shiny Apps, I decided to have a go at building a data input tool in shiny. By levering shiny's reactive framework, my thinking was that I could filter data reactively by date, or by other partner session characteristics (e.g. day of session delivery), to ensure that partners were always seeing the most up-to-date list of students when they went to enter data. Additionally, I thought I could cut down on some of the ineffiencies between reporting on 'attendance' and 'engagement'. If a student has not attended a session, by definition, they won't be 'engaged' in the session, so there is no need for their name to appear twice.
 
-The App starts by loading R packages.
+The App starts by loading R packages, the data, and the unique Dropbox token. In this section of the App, I've also defined the fields that we want to draw from the partner data.
 
 ```javascript
 library(shiny)
@@ -38,7 +38,7 @@ partner$Date.ended <- as.Date(partner$Date.ended, format="%d/%m/%Y")
 fields <- c("password", "date","filter", "attended", "engaged")
 ```
 
-Next, the UI. 
+Next, the UI. This includes some instructions for partners to enter data, as well as a passwordInput and DateInput fields, which will be used in the server section to filter the data. I've also set an action button for partners to subimit the data, and added some hidden 'thank you' text using the `hidden` function from the `Shinyjs` package. 
 
 ```javascript
 shinyApp(
@@ -93,4 +93,3 @@ shinyApp(
                      ))
 ```
 
-A few things to note here. First, there is a password 
