@@ -38,3 +38,57 @@ partner$Date.ended <- as.Date(partner$Date.ended, format="%d/%m/%Y")
 fields <- c("password", "date","filter", "attended", "engaged")
 ```
 
+Next, the UI. 
+
+```javascript
+shinyApp(
+  ui = bootstrapPage(theme=shinytheme("flatly"),
+                     navbarPage("Partner Data Portal",
+                                tabPanel("Data entry",
+                                         sidebarLayout(   
+                                           sidebarPanel(
+                                             p("Welcome to the Partner Zone Data Portal!"),
+                                             p(""),
+                                             p("This is where you can enter attendance and engagement data about a session."),
+                                             p("Please enter your password and the session date to reveal students' names."),
+                                             passwordInput("password", "Please enter your password", ""),
+                                             dateInput("date", "What was the date of the session?"),
+                                             uiOutput("filter"),
+                                             p("Need help? Have any questions?"),
+                                             p("Please contact Bridget Suthersan, Senior Data Analyst, on xxx@gmail.com"),
+                                             actionButton("submit", "Submit Data"),
+                                             p(""),
+                                             p(""),
+                                             useShinyjs(),
+                                             shinyjs::hidden(
+                                               div(id = "thankyou", "Thank you, your data has been received!"))),
+                                           mainPanel(
+                                             img(src='Logo.jpg', align = "right", width=250, height=250),
+                                             div(id="myapp",
+                                                 uiOutput("attended"),
+                                                 uiOutput("engaged"))))),
+                                tabPanel("Help and FAQ",
+                                         sidebarLayout(   
+                                           sidebarPanel(
+                                             p("Use this part of the data portal for help or to browse frequently asked questions"),
+                                             p(""),
+                                             p(strong("How does the data portal work?")),
+                                             p(""),
+                                             p(strong("I've made a mistake - what do I do?")),
+                                             p(""),
+                                             p(strong("I've forgotten my password - what do I do?"))),
+                                           mainPanel( 
+                                             img(src='Logo.jpg', align = "right", width=250, height=250),
+                                             p(strong("How does the data portal work?")),
+                                             p(""),
+                                             p("The data portal is where you can enter attendance and engagement data about our students. We use this portal to collect data for all our students from partners."),
+                                             p(strong("I've made a mistake in my data entry! What do I do?")),
+                                             p(""),
+                                             p("That's okay! Just re-enter your data, and drop Bridget a line at xxx@gmail.com, letting her know what to look out for."),
+                                             p(""),
+                                             p(strong("I've forgotten my password - what do I do?")),
+                                             p(""),
+                                             p("You can request a password reset by emailing Bridget Suthersan on xxx@gmail.com"))
+                                         ))
+                     ))
+```
