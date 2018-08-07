@@ -17,9 +17,9 @@ Besides R, I am an intermediate user of the javascript library d3, and an advanc
 
 ## Links
 
-[Twitter](https://twitter.com/blsuthersan)
-
 [LinkedIn](https://www.linkedin.com/in/bridget-suthersan-b4a5a4b3/)
+
+[Twitter](https://twitter.com/blsuthersan)
 
 
 
