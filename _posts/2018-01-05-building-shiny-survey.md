@@ -1,6 +1,7 @@
 ------
 title: Building a survey input tool in shiny
------
+header: Building a survey input tool in shiny
+------
 
 One of my roles at West London Zone involves overseeing the partner data system - that is, the collection of attendance and engagement data from 20 partners, operating around 60 sessions a week, across 9 schools. A major part of the challenge is the flexibility of our needs-based partner allocation model, whereby students can be allocated or removed from partner sessions as their needs change. This means that there at least weekly changes to the lists of students that partners need to report on, and it is my job to ensure that partners are always receiving and reporting on the most up-to-date list of students.
 
@@ -8,7 +9,7 @@ After reading [this post](https://shiny.rstudio.com/articles/persistent-data-sto
 
 The App starts by loading R packages, the data, and the unique Dropbox token. In this section of the App, I've also defined the fields that we want to draw from the partner data.
 
-```javascript
+```
 library(shiny)
 library(rdrop2)
 library(lubridate)
@@ -40,7 +41,7 @@ fields <- c("password", "date","filter", "attended", "engaged")
 
 Next, the UI. This includes some instructions for partners to enter data, as well as a passwordInput and DateInput fields, which will be used in the server section to filter the data. I've also set an action button for partners to subimit the data, and added some hidden 'thank you' text using the `hidden` function from the `Shinyjs` package. 
 
-```javascript
+```
 shinyApp(
   ui = bootstrapPage(theme=shinytheme("flatly"),
                      navbarPage("Partner Data Portal",
@@ -95,7 +96,7 @@ shinyApp(
 
 Finally, the server function. This section starts by reactively filtering the underlying partner data, depending on the password input field.
 
-```javascript
+```
   server = function(input, output, session) {
     
   
@@ -118,7 +119,7 @@ Finally, the server function. This section starts by reactively filtering the un
    ```
 The password 'buckingham' has been assigned to our made-up partner "Buckingham Palace', and the password 'kensington' to our second partner "Kensington Palace". For the purposes of this example, Buckingham Palace runs partner sessions only once a week, so they only have the Date input to filter their dataset, but Kensington Palace runs two sessions per week, with different groups of students. So, I've added a second filter `filter1` so that the Kensington Palace data can be filtered by the session was run on a Monday or a Wednesday, and, later on in the server section, defined a reactive UI that only shows once 'kensington' is added into the partner input.
 
-```javascript
+```
     output$filter <- renderUI({
       if(input$password=="kensington") {
         selectInput("filter1", label="Please select the session", choices=c("Monday session","Wednesday session"))
@@ -129,7 +130,7 @@ The password 'buckingham' has been assigned to our made-up partner "Buckingham P
 
 Two other `renderUI` functions appear in the shiny server. The first is for the list of students for partners to report attendance on, which will only appear once a partner has correctly entered their password in the `passwordInput` field. 
 
-```javascript
+```
     output$attended <- renderUI({
       if(input$password=="buckingham" | input$password=="kensington") {
         new2 <- filterdata()
@@ -141,7 +142,7 @@ Two other `renderUI` functions appear in the shiny server. The first is for the 
 
 The second is for partners to report on the number of engaged students per session. The code is written such that only students marked as 'attended' also appear in this list.
 
-```javascript
+```
     output$engaged <- renderUI({
       if(input$password=="buckingham" | input$password=="kensington") {
         new3 <- new()
@@ -153,8 +154,7 @@ The second is for partners to report on the number of engaged students per sessi
  
  Finally, the server section includes the functions for aggregating and saving the data, as per Dean's original post.
  
- ```javascript
- 
+ ```
      # Whenever a field is filled, aggregate all form data
     formData <- reactive({
       data <- sapply(fields, function(x) input[[x]])
