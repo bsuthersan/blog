@@ -1,7 +1,7 @@
-------
+---
 title: Building a survey input tool in shiny
 header: Building a survey input tool in shiny
-------
+---
 
 One of my roles at West London Zone involves overseeing the partner data system - that is, the collection of attendance and engagement data from 20 partners, operating around 60 sessions a week, across 9 schools. A major part of the challenge is the flexibility of our needs-based partner allocation model, whereby students can be allocated or removed from partner sessions as their needs change. This means that there at least weekly changes to the lists of students that partners need to report on, and it is my job to ensure that partners are always receiving and reporting on the most up-to-date list of students.
 
