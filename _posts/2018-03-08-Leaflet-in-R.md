@@ -1,6 +1,7 @@
 ---
 title: Mapping life satisfaction with Leaflet in R
 header: Mapping life satisfaction with Leaflet in R
+tags: rstats leaflet mapping
 ---
 
 It wasn't until after [I went through](https://bsuthersan.github.io/blog/IDACI-map) the whole process of using Leaflet.js that I discovered that there is a [Leaflet package for R!](https://rstudio.github.io/leaflet/). The documentation promised that "this R package makes it easy to integrate and control Leaflet maps in R", and they weren't wrong.
