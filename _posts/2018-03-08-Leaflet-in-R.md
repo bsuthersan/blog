@@ -1,5 +1,6 @@
 ---
-title: "Mapping life satisfaction with Leaflet in R"
+title: Mapping life satisfaction with Leaflet in R
+header: Mapping life satisfaction with Leaflet in R
 ---
 
 It wasn't until after I went through the whole process of using Leaflet.js itself that I discovered that there is a [Leaflet package for R!](https://rstudio.github.io/leaflet/). The documentation promised that "this R package makes it easy to integrate and control Leaflet maps in R", and they weren't wrong.
