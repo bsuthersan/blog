@@ -1,6 +1,6 @@
 ---
 title: Data driven parenting
-description: 
+description: data driven parenting
 header: Data driven parenting: Using web scraping to evaluate the longevity of a baby bath
 ---
 
