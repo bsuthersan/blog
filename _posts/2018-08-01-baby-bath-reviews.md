@@ -1,7 +1,7 @@
 ---
 title: Data driven parenting
 description: data driven parenting
-header: Data driven parenting: Using web scraping to evaluate the longevity of a baby bath
+header: Data driven parenting - Using web scraping to evaluate the longevity of a baby bath
 ---
 
 Like many soon-to-be parents, my husband and I are currently trying to navigate all the new products we need to buy before the little chap makes his arrival...clothes, wraps, nappy changing tables, you name it. One of the new things we'll need is a baby bath, as we don't have a separate bath at our current place. 
