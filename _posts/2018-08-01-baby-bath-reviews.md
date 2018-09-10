@@ -59,7 +59,7 @@ keywords <- keywords %>%
 ```
 There were 86 duplicated rows in total, so after all of this, I was left with a data frame of 98 observations. However, with the data in the right format, it was time to graph it and run some basic descriptive stats.
 
-![alt text](https://raw.githubusercontent.com/bsuthersan/blog/gh-pages/New%20blog%20posts/babybathmonths.png)
+![alt text](https://raw.githubusercontent.com/bsuthersan/blog/gh-pages/New%20blog%20posts/Screen%20Shot%202018-08-11%20at%2016.30.48.png)
 
 Well, there you have it. The median use time seems to be just 3 months (and the average time only 3.6 months), so I guess it's a pass from us for now. 
 
