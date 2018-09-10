@@ -53,9 +53,9 @@ ggplot(mydata, aes(x=Date, y=value, group=1)) +
   labs(caption = "Source: Department for Education")
 ```
 
-Only 51 lines of code! And the finished product:
+Only 1 extra line of code! And the finished product:
 
-
+![alt text](https://raw.githubusercontent.com/bsuthersan/blog/gh-pages/New%20blog%20posts/NEET.gif)
 
 
 
