@@ -1,5 +1,5 @@
 ---
-title: Data driven baby naming
+title: How to use R and shiny to name your child
 ---
 # Step 1
 
