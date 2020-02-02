@@ -1,6 +1,9 @@
 ---
 title: How to use R and shiny to name your child
+output: html_notebook
 ---
+
+
 # Step 1
 
 Get pregnant. There are many excellent guides and hacks out there to help you with this part of the process. 
